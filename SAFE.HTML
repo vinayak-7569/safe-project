@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contact & Location Sharer</title>
+    <link rel="stylesheet" href="safe.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Emergency Contact</h2>
+        <input type="text" id="contactName" placeholder="Contact Name">
+        <input type="tel" id="contactNumber" placeholder="Phone Number">
+        <button onclick="saveContact()">Save Contact</button>
+
+        <h3>Saved Contacts:</h3>
+        <ul id="contactList"></ul>
+
+        <button onclick="sendLocation()">Send Location</button>
+    </div>
+
+    <script src="safe.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+ /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background Animation */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black; /* Black background */
+    animation: backgroundAnimation 8s infinite alternate;
+}
+
+/* Background Animation Effect */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #000000, #1a1a1a);
+    }
+    100% {
+        background: linear-gradient(135deg, #1a1a1a, #000000);
+    }
+}
+
+/* Main Container */
+.container {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Container Hover Effect */
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Heading */
+h2 {
+    color: white;
+    margin-bottom: 15px;
+    animation: slideDown 0.8s ease-in-out;
+}
+
+h3 {
+    color: white;
+    margin-top: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Input Focus Effect */
+input:focus {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    margin: 5px 0;
+    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Button Hover & Active Effects */
+button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Contact List */
+ul {
+    list-style: none;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+li {
+    padding: 8px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
